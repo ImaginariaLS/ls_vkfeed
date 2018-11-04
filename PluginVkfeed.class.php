@@ -8,21 +8,24 @@
  *--------------------------------------------------------------------------------------*/
 
 if (!class_exists('Plugin')) {
-	die('Hacking attempt!');
+    die('Hacking attempt!');
 }
 
-class PluginVkfeed extends Plugin {
+class PluginVkfeed extends Plugin
+{
 
-	public function Activate() {
-		return true;
-	}
+    protected $aInherits = array(
+        'module' => array('ModuleTopic', 'ModuleVote')
+    );
 
-	protected $aInherits=array(
-		'module'=>array('ModuleTopic', 'ModuleVote')
-	);
+    public function Activate()
+    {
+        return true;
+    }
 
-	public function Init() {
-		return true;
-	}
+    public function Init()
+    {
+        return true;
+    }
 
 }

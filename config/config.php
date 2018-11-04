@@ -7,7 +7,7 @@
  *	author site: http://artemeff.ru/
  *--------------------------------------------------------------------------------------*/
 
-$config=array();
+$config = array();
 
 /**
  * Тип отправки сообщений
@@ -31,11 +31,11 @@ $config['log_file'] = '___path.root.server___/logs/vkfeed.log';
 /**
  * Шаблон для публикации на стенку
  *
- * %topic_title%	- заголовок топика
- * %topic_text%	- текст топика
- * %topic_date%	- дата публикации
- * %author%			- автор топика
- * %blog_title%	- название блога, в котором опубликован топик
+ * %topic_title%    - заголовок топика
+ * %topic_text%    - текст топика
+ * %topic_date%    - дата публикации
+ * %author%            - автор топика
+ * %blog_title%    - название блога, в котором опубликован топик
  */
 $config['pattern'] = '%blog_title% / %topic_title% / %author% / %topic_text%';
 /**
@@ -49,10 +49,8 @@ $config['appSecret'] = 'xxxxxxxxxxxx'; // Security key
 $config['file'] = '___sys.cache.dir___vkfeed_token.txt'; // Путь до файла с токеном
 
 /**
- *	Служебные настройки
+ *    Служебные настройки
  */
 Config::Set('router.page.vkfeed', 'PluginVkfeed_ActionVkfeed');
 
 return $config;
-
-?>
